@@ -39,5 +39,5 @@ if ($usuario->usuarioLogeado()) {
 }
 ?>
 <div class="col"> hola</div>
-<div class="row"> otro luis</div>
-<div class="row"> otro luis2</div>
+<<hola> </hola>>
+<div class="lalala">christian</div>
