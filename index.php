@@ -40,3 +40,4 @@ if ($usuario->usuarioLogeado()) {
 ?>
 <div class="col"> hola</div>
 <div class="col"> chau</div>
+<div class="lalala">christian</div>
