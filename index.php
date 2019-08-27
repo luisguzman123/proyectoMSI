@@ -38,4 +38,4 @@ if ($usuario->usuarioLogeado()) {
     include_once './paginas/login.php';
 }
 ?>
- //ola
+<div class="col"> hola</div>
