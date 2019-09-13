@@ -102,4 +102,36 @@ function cursosDisponibles() {
     }
 }
 
-?>
+/////////////////////////////// push /////////////////////////
+if (isset($_POST['cursosactivos'])) {
+    cursosactivos();
+}
+function cursosactivos() {
+     session_start();
+    //instanciamos la conexion
+    $conexion = new DB();
+    //preparamos una consulta
+
+    $query = $conexion->conectar()->prepare("SELECT cur.id_curso, cur.descripcion 
+        FROM clientes c 
+        JOIN alumnos a 
+        ON a.id_cliente = c.id_cliente 
+        JOIN cursos cur 
+        ON cur.id_curso =  a.id_curso 
+        WHERE c.id_cliente = " . $_SESSION['id_cliente']);
+    //ejecutamos la consulta 
+    $query->execute();
+    
+    if($query->rowCount()){
+        $arreglo = array();
+        foreach ($query as $fila) {
+            array_push($arreglo, array(
+                "id_curso" => $fila['id_curso'],
+                "descripcion" => $fila['descripcion'] 
+            ));
+        }
+        echo json_encode($arreglo);
+    }else{
+        echo "0";
+    }
+}
