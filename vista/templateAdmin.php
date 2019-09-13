@@ -31,6 +31,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <script src="vista/js_eventos/vista/VistaNacionalidad.js"></script>
         <script src="vista/js_eventos/vista/VistaCiudad.js"></script>
         <script src="vista/js_eventos/vista/VistaCliente.js"></script>
+       
 
 
 
