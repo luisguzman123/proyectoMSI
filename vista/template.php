@@ -25,6 +25,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <script src="bower_components/jquery/dist/jquery.min.js"></script>
         <script src="vista/js_eventos/vista/VistaCalificaciones.js"></script>
         <script src="vista/js_eventos/vista/VistaCurso.js"></script>
+        <script src="vista/js_eventos/vista/VistaCuota.js"></script>
 
 
 
@@ -287,6 +288,17 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
                             </ul>
                         </li>
+                         <li class="treeview cuotas">
+                            <a href=""><i class="fa fa-link"></i> <span>Cuotas</span>
+                                <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                            </a>
+                         <ul class="treeview-menu">
+                                <li><a href="" onclick="mostrarCuota(); return false;"><i class="fa fa-circle-o"></i>Visualizar </a></li>
+
+                            </ul>
+                        </li>
                         
 
                     </ul>
@@ -425,3 +437,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
              user experience. -->
     </body>
 </html>
+
+//*numero de cuota
+fecha pagada
+fecha vencimiento
+monto pagado 
+saldo *//

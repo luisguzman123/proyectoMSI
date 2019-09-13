@@ -12,6 +12,7 @@ if ($usuario->adminLogeado()) {
     //pasamos los datos de sesion a la clase usuario activo
     $usuario_activo->setNombre($usuario->getNombreAdmin());
     $usuario_activo->setId_cliente($usuario->getIdAdmin());
+    
     include_once './vista/templateAdmin.php';
 //    echo "usuario logeado";
 } else if (isset ($_POST['usuario']) && isset ($_POST['pass'])) {
