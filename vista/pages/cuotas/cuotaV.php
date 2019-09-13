@@ -1,4 +1,6 @@
-
+<script>
+    dameCusosalumno("lista_cuotas");
+</script>
 <div class="box-body">
     <!--fila-->
     <div class="row" >
