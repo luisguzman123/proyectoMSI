@@ -58,6 +58,7 @@ function dameCusosalumno(identidad){
         url: "controladores/cursos.php",
         data: "cursos_activos=1",
         success: function (datos) {
+//            console.log(datos);
             contenido = datos;
         }
     });

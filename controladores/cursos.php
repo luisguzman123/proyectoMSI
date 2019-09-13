@@ -103,7 +103,7 @@ function cursosDisponibles() {
 }
 
 /////////////////////////////// push /////////////////////////
-if (isset($_POST['cursosactivos'])) {
+if (isset($_POST['cursos_activos'])) {
     cursosactivos();
 }
 function cursosactivos() {
