@@ -34,10 +34,11 @@ function validarListaDesplegableID(id, mensaje) {
  * Funcion que devuelve un numero separando los separadores de miles
  * Puede recibir valores negativos y con decimales
  */
-function formatearNumero(numero) {
+function formatearNumero(valor) {
     // Variable que contendra el resultado final
     var resultado = "";
 
+    var numero = String(valor);
     // Si el numero empieza por el valor "-" (numero negativo)
     if (numero[0] == "-")
     {

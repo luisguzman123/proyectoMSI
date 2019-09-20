@@ -23,6 +23,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <link rel="stylesheet" href="vista/dist/css/skins/skin-blue.min.css">
         <link rel="stylesheet" href="vista/css_style/estilos.css">
         <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="vista/js_eventos/vista/Util.js"></script>
         <script src="vista/js_eventos/vista/VistaCalificaciones.js"></script>
         <script src="vista/js_eventos/vista/VistaCurso.js"></script>
         <script src="vista/js_eventos/vista/VistaCuota.js"></script>

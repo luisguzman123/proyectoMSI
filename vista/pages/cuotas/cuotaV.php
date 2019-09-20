@@ -49,6 +49,10 @@
                             
                         </tbody>
                     </table>
+                    <div class="row" style="margin-top: 30px; font-size: 25px; background: #006699; color: #fff;"> 
+                        <div style="text-align: center; margin: 0px auto;">Total a pagar</div>
+                        <div id="total_pagar" style="text-align: center; margin: 0px auto;">0</div>
+                    </div>
                 </div> 
             </div>
         </div>

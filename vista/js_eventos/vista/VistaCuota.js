@@ -39,6 +39,7 @@ function verCuotas() {
     if (contenido == "0") {
     } else {
 
+        var total = 0;
         var json_datos = JSON.parse(contenido);
         var tabla = "";
 
@@ -46,13 +47,21 @@ function verCuotas() {
             tabla += "<tr>";
             tabla += "<td>" + data.nro_cuota + "</td>";
             tabla += "<td>" + data.fecha_vencimiento + "</td>";
-            tabla += "<td>" + (data.fecha_pagada == null)? " - ": data.fecha_pagada + "</td>";
-            tabla += "<td>" + data.saldo + "</td>";
+            if (data.fecha_pagada == null) {
+
+                tabla += "<td>-</td>";
+            } else {
+
+                tabla += "<td>" + data.fecha_pagada + "</td>";
+            }
+            tabla += "<td>" + formatearNumero(data.saldo) + "</td>";
             tabla += "</tr>";
+            total += data.saldo;
 
         });
 
         $("#tabla_cuotas").html(tabla);
+        $("#total_pagar").text(formatearNumero(total));
 
 
     }
