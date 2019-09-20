@@ -1,9 +1,9 @@
 <?php
 if(isset($_POST['dame_cuota'])){
-    dameCuota();
+    dameCuota($_POST['dame_cuota']);
 }
 
-function dameCuota(){
+function dameCuota($id_articulo){
     session_start();
     $base_datos = new DB();
     $query = $base_datos->conectar()->prepare("SELECT 
@@ -32,8 +32,11 @@ ON cc.id_venta_detalle = vc.id_venta_cabecera
 JOIN cuentas_recibir_detalle cd 
 ON cd.id_cuenta_recibir_cabecera = cc.id_cuenta_recibir_cabecera
 
-WHERE c.id_cliente = ". $_SESSION["id_cliente"]." AND a.id_articulos = :id_articulos");
-    $query->execute();
+JOIN cursos cur
+ON cur.id_articulo = a.id_articulos
+
+WHERE c.id_cliente = ". $_SESSION["id_cliente"]." AND cur.id_curso = :id_articulos");
+    $query->execute(["id_articulos" => $id_articulo]);
     
     if($query->rowCount()){
         $arreglo = array();
