@@ -1,4 +1,6 @@
 <?php
+//IMPORTACIONES
+include_once '../includes/db.php';
 if(isset($_POST['dame_cuota'])){
     dameCuota($_POST['dame_cuota']);
 }

@@ -17,7 +17,7 @@ function mostrarCuota() {
 
 
 }
-function cargarTablaCuotas() {
+function verCuotas() {
     var contenido = "";
 
     $.ajax({
@@ -55,7 +55,7 @@ function cargarTablaCuotas() {
 
         });
 
-        $("#tabla_cuota").html(tabla);
+        $("#tabla_cuotas").html(tabla);
 
 
     }
