@@ -17,3 +17,46 @@ function mostrarCuota() {
 
 
 }
+function cargarTablaCuotas() {
+    var contenido = "";
+
+    $.ajax({
+        type: "POST",
+        async: false,
+        cache: false,
+        url: "controladores/cuotas.php",
+        data: "dame_cuota=" + $("#lista_cuotas").val(),
+        success: function (datos) {
+
+            console.log(datos);
+            contenido = datos;
+
+
+        }
+    });
+
+
+    if (contenido == "0") {
+    } else {
+
+        var json_datos = JSON.parse(contenido);
+        var tabla = "";
+
+        json_datos.map(function (data) {
+            tabla += "<tr>";
+            tabla += "<td>" + data.cliente + "</td>";
+            tabla += "<td>" + data.curso + "</td>";
+            tabla += "<td>" + data.nro_cuota + "</td>";
+            tabla += "<td>" + data.fecha_vencimiento + "</td>";
+            tabla += "<td>" + data.fecha_pagada + "</td>";
+            tabla += "<td>" + data.saldo + "</td>";
+            tabla += "<td>";
+            tabla += "</tr>";
+
+        });
+
+        $("#tabla_cuota").html(tabla);
+
+
+    }
+}

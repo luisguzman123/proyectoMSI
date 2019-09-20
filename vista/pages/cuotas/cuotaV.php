@@ -45,6 +45,9 @@
                                 <th>Saldo</th>
                             </tr>
                         </thead>
+                        <tbody id="tabla_cuotas">
+                            
+                        </tbody>
                     </table>
                 </div> 
             </div>
