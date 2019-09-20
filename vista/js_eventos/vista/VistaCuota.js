@@ -44,13 +44,10 @@ function verCuotas() {
 
         json_datos.map(function (data) {
             tabla += "<tr>";
-            tabla += "<td>" + data.cliente + "</td>";
-            tabla += "<td>" + data.curso + "</td>";
             tabla += "<td>" + data.nro_cuota + "</td>";
             tabla += "<td>" + data.fecha_vencimiento + "</td>";
-            tabla += "<td>" + data.fecha_pagada + "</td>";
+            tabla += "<td>" + (data.fecha_pagada == null)? " - ": data.fecha_pagada + "</td>";
             tabla += "<td>" + data.saldo + "</td>";
-            tabla += "<td>";
             tabla += "</tr>";
 
         });
